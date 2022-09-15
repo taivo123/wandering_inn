@@ -15,6 +15,7 @@ jobs:
       - name: Python requirements
         run: |       
           pip install -r requirements.txt
+          pipenv install ebookmaker
         
       - name: Generate
         run: ./wanderinginn2epub.py --volume 1 2 3 4 5 6 7 8 --output-by-volume  --strip-color
