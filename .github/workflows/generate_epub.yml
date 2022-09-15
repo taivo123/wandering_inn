@@ -1,0 +1,19 @@
+name: generate epub
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:    
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4.2.0
+
+      - name: Run a one-line script
+        run: ./wanderinginn2epub.py --volume 1 2 3 4 5 6 7 8 --output-by-volume  --strip-color
+
+      - name: 'Upload a Build Artifact'
+        uses: actions/upload-artifact@v3.1.0
