@@ -26,4 +26,5 @@ jobs:
       - name: 'Upload epub'
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: wandering_inn_vol_1-8          
+          name: wandering_inn_vol_1-8
+          path: build/
