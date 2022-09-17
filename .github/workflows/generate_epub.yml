@@ -23,7 +23,9 @@ jobs:
         
       - name: Generate
         run: | 
-          wanderinginn2epub.py --volume 1 2 3 4 5 6 7 8 --strip-color
+          python ./wanderinginn2epub.py --volume 1 2 3 4 5 6 7 8 --strip-color
 
       - name: 'Upload a Build Artifact'
         uses: actions/upload-artifact@v3.1.0
+        with:
+          name: wandering_inn_vol_1-8          
